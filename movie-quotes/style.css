@@ -1,0 +1,79 @@
+@font-face {
+	font-family: 'Ghostbusters';
+	src: url('fonts/GHOSTBUS.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: #181818 url('https://www.transparenttextures.com/patterns/old-wall.png');
+	color: #e2d9c3;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: rgba(28, 28, 23, 0.95);
+	padding: 2em 0;
+	text-align: center;
+	border-bottom: 2px solid #323131;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+h1 {
+	font-size: 3em;
+	margin: 2px;
+	color: #eadfd4;
+	font-family: 'Ghostbusters', Arial, sans-serif;
+	text-shadow: 0 0 12px #992434;
+}
+
+main {
+	max-width: 900px;
+	margin: 4em auto;
+	padding: 3em;
+	background: rgba(28, 28, 23, 0.95);
+	border-radius: 12px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.7);
+	border: 2px solid #bcad9e;
+}
+
+section {
+	margin: 3em;
+}
+
+hr {
+    margin: 3em 0;
+	border-top: 1px solid #bcad9e;
+}
+
+.quote,
+.stage-direction {
+	margin: 0.7em 0;
+	padding: 0.5em;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.15em;
+	background: rgba(94, 94, 87, 0.3);
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.stage-direction {
+	font-style: italic;
+	color: #b4aaaa;
+}
+
+.inline-stage-direction {
+	font-style: italic;
+	color: #b4aaaa;
+}
+
+.character {
+	font-weight: bold;
+}
+.venkman { color: #676d45; }
+.dana { color: #A6AA8A; }
+.ray { color: #A89F6A; }
+.egon { color: #936B47; }
+.winston { color: #774f4f; }
+.mayor { color: #826d5e; }
