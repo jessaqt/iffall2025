@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'MagazineLetter';
+  src: url('resources/MagazineLetterByBrntlbrnl-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DeFonteReduced';
+  src: url('resources/TrueType/DeFonte reduced Normale.ttf') format('truetype');
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('resources/paper bg.jpg') center center / cover repeat;
+}
+
+
+.title {
+  font-family: 'MagazineLetter', Impact, fantasy;
+  font-size: 5em;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2em;
+  text-align: center;
+  color: #000000;
+}
+
+.artist {
+  font-family: 'DeFonteReduced', 'Courier New', monospace;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+.lyrics {
+  margin-top: 1em;
+  font-size: 1.15em;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.lyric-tag {
+  display: inline;
+  margin: 0 0 0.1em 0;
+  font-family: 'DeFonteReduced', 'Courier New', monospace;
+  font-size: 0.95em;
+  font-style: italic;
+  color: #565555;
+  opacity: 0.7;
+}
+
+.lyrics-container {
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: center;
+  position: relative;
+}
+
+.doodle-img {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.85;
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+}
+
+.doodle-img.top-left {
+  top: 10px;
+  left: 100px;
+  max-width: 15vw;
+}
+
+.doodle-img.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  max-width: 25vw;
+}
