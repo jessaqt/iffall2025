@@ -6,17 +6,19 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 32px;
   margin-left: 45px;
 }
 
 .summary {
-  margin: 45px 45px 80px;
+  margin: 45px;
   font-size: 16px;
+  margin-bottom: 80px;
 }
 
 .group {
-  margin: 45px 45px 90px;
+  margin: 45px;
+  margin-bottom: 90px;
 }
 
 .group h2 {
@@ -38,15 +40,19 @@ h1 {
 .normal-weight { font-weight: 400; }
 .bold-weight   { font-weight: 700; }
 
+.normal-style  { font-style: normal; }
 .italic-style  { font-style: italic; }
 
-.wide-spacing  { letter-spacing: 3px; }
-.tight-spacing { letter-spacing: -1px; }
+.normal-spacing { letter-spacing: normal; }
+.wide-spacing   { letter-spacing: 0.3em; }
+.tight-spacing  { letter-spacing: -0.06em; }
 
-.uppercase     { text-transform: uppercase; }
-.lowercase     { text-transform: lowercase; }
-.capitalize    { text-transform: capitalize; }
+.transform-none { text-transform: none; }
+.uppercase      { text-transform: uppercase; }
+.lowercase      { text-transform: lowercase; }
+.capitalize     { text-transform: capitalize; }
 
-.underline     { text-decoration: underline; }
-.overline      { text-decoration: overline; }
-.line-through  { text-decoration: line-through; }
+.deco-none    { text-decoration: none; }
+.underline    { text-decoration: underline; }
+.overline     { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
