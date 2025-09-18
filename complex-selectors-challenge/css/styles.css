@@ -1,0 +1,66 @@
+header{
+  margin-bottom: 3rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a.see-all{
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.shows h1{
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.shows h2{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.cast img{
+    width: 100%;
+}
+
+/* each castmember in the list  */
+.cast li{
+    width: 25%;
+}
+
+/* add border above each show ONLY  */
+.shows > li{
+    border-top: 1px solid black;
+}
+
+nav li.selected a{
+    font-weight: bold;
+    color: black;
+}
+
+.cast li div{
+    font-size: 0.8rem;
+}
+
+/* actor/actress name bold, character name italic */
+.cast li div:nth-of-type(1){
+    font-weight: bold;
+}
+
+.cast li div:nth-of-type(2){
+    font-style: italic;
+}
+
+#game-of-thrones .seasons ul li:last-child::after{
+    content: "*";
+} 
+
+#game-of-thrones .seasons ul::after{
+    content: "* Final Season";
+    font-size: 0.7rem;
+    color: #999;
+    display: block;
+} 
