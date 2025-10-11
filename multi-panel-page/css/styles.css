@@ -1,0 +1,139 @@
+body{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header{
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(17, 88, 138, 0.2);
+    background-image: url("../images/cat banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 480px;
+    text-shadow: 0px 3px 8px rgba(0, 30, 51, 0.6);
+}
+
+h1{
+    margin: 0;
+    font-size: 80px;
+    transform: translateY(-12%);
+}
+
+h2{
+    margin: 0;
+    font-size:30px;
+    transform: translateY(-40%);
+}
+
+h3{
+    margin: 0;
+    padding-bottom: 14px;
+    font-size: 40px;
+    text-align: center;
+}
+
+section > div{
+    width: 960px;
+    margin : auto
+}
+
+section.intro{
+    padding: 40px;
+    padding-bottom: 55px;
+    background-color: rgb(14, 43, 72);
+    color: white;
+}
+
+section.intro p{
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    margin-top: 17px;
+}
+
+section.intro img{
+    margin-top: 18px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    float: right;
+    border: 3px solid white;
+}
+
+section.photo-gallery{
+    padding-top:40px;
+    padding-bottom: 34px;
+    background-color: rgb(242, 226, 226);
+}
+
+.text-content div {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 18px;
+    margin-left: 12px;
+    max-width: 220px;
+    line-height: 1.4;
+}
+
+
+.grid img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2px;
+    row-gap: 8px;
+}
+
+.grid li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.last-section{
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 75px;
+    background-color: rgb(14, 43, 72);
+    color: white;
+    margin-bottom: 0;
+}
+
+.last-section p{
+    margin-top: 16px;
+    line-height: 1.4;
+    font-size: 26px;
+    max-width: 720px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+footer{
+    background-color: rgb(242, 226, 226);
+    padding:22px 0px;
+}
+
+footer p{
+    font-size: 18px;
+    padding: 0px 0px 0px 280px;  
+}
