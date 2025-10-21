@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #fdfcfb;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  padding: 80px 40px 60px;
+  background: #f0dfbf;
+  margin-bottom: 60px;
+  position: relative;
+  border-radius: 8px;
+  border: 2px solid #d4c4a0;
+
+  --r: 3.00rem; /* radius controls scallop size and count */
+
+  /* scalloped mask on all 4 sides */
+  -webkit-mask:
+    linear-gradient(#000 0 0) no-repeat
+      50% / calc(100% - 2 * var(--r)) calc(100% - 2 * var(--r)),
+    radial-gradient(farthest-side, #000 97%, #0000)
+      0 0 / calc(2 * var(--r)) calc(2 * var(--r)) round;
+  mask:
+    linear-gradient(#000 0 0) no-repeat
+      50% / calc(100% - 2 * var(--r)) calc(100% - 2 * var(--r)),
+    radial-gradient(farthest-side, #000 97%, #0000)
+      0 0 / calc(2 * var(--r)) calc(2 * var(--r)) round;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: #2d2d2d;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.recipe-meta {
+  background: white;
+  padding: 15px 30px;
+  display: inline-block;
+  margin: -30px auto 40px;
+  border-radius: 8px;
+  border: 1px solid #d4c4a0;
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+main > * {
+  text-align: left;
+}
+
+.recipe-meta p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.time-section {
+  background: white;
+  padding: 40px 50px;
+  margin: 60px 0;
+  border-radius: 8px;
+  border: 1px solid #d4c4a0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.time-item {
+  text-align: center;
+}
+
+.time-item .label {
+  font-size: 0.75rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.time-item .value {
+  font-size: 1.5rem;
+  color: #c9a961;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #2d2d2d;
+  margin: 70px 0 40px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.dietary-info {
+  background: #fffbf5;
+  padding: 30px 40px;
+  margin: 40px 0;
+  border-radius: 8px;
+  border: 1px solid #e8dcc4;
+}
+
+.dietary-info strong {
+  color: #c9a961;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  margin: 30px 0;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  border: 1px solid #d4c4a0;
+}
+
+ul li {
+  padding: 16px 0;
+  margin: 0;
+  background: transparent;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+ul li.serving-note {
+  border-bottom: 2px solid #e8dcc4;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 0.95rem;
+  justify-content: center;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d4c4a0;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: #c9a961;
+}
+
+ul li label {
+  cursor: pointer;
+  color: #333333;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+ul li input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.instructions {
+  margin: 50px 0;
+}
+
+.instruction-step {
+  background: white;
+  padding: 0;
+  margin: 50px 0;
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #d4c4a0;
+}
+
+@media (min-width: 768px) {
+  .instruction-step {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .instruction-step:nth-child(even) .step-image {
+    order: 2;
+  }
+
+  .instruction-step:nth-child(even) .step-text {
+    order: 1;
+  }
+}
+
+.step-number {
+  display: inline;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #3d3d3d;
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+.step-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333333;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step-text p {
+  font-weight: 400;
+}
+
+.step-image {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  min-height: 350px;
+  background: #f9f6f1;
+}
+
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.storage-tips {
+  background: #fffbf5;
+  padding: 40px 50px;
+  margin: 60px 0;
+  border-radius: 8px;
+  border: 1px solid #e8dcc4;
+}
+
+.storage-tips p {
+  margin: 0;
+  line-height: 1.8;
+  color: #333333;
+  font-weight: 400;
+}
+
+.storage-tips strong {
+  letter-spacing: 0.5px;
+  color: #c9a961;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.source {
+  text-align: center;
+  padding: 20px;
+  margin: 60px 0 40px;
+  background: transparent;
+  color: #999999;
+  border-radius: 0;
+  border: none;
+}
+
+.source p {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.source a {
+  color: #999999;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.source a:hover {
+  border-bottom-color: #999999;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  header {
+    --r: 3.00rem;
+    padding: 60px 30px 50px;
+    margin-bottom: 40px;
+  }
+
+  .recipe-meta {
+    padding: 15px 25px;
+    border-radius: 6px;
+  }
+
+  .time-section {
+    padding: 30px 25px;
+    gap: 20px;
+  }
+
+  .time-item .value {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    margin: 50px 0 30px;
+  }
+
+  .instruction-step {
+    margin: 35px 0;
+    border-radius: 6px;
+  }
+
+  .step-text {
+    padding: 35px 30px;
+  }
+
+  .step-image {
+    min-height: 280px;
+  }
+
+  .storage-tips {
+    padding: 30px 25px;
+    border-radius: 6px;
+  }
+
+  .source {
+    padding: 35px;
+    border-radius: 6px;
+  }
+}
