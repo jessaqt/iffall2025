@@ -28,7 +28,7 @@
         </div>
       </div>
       
-      <section>
+      <section id="ingredients">
         <h2>Ingredients</h2>
         <div class="dietary-info">
           <strong>Dietary Information:</strong> This recipe contains gluten, dairy, and eggs. For a dairy-free version, substitute plant butter in the pastry and use full-fat tinned coconut milk instead of evaporated milk.
@@ -144,7 +144,7 @@
       </section>
 
       <div class="storage-tips">
-        <p><strong>Tips:</strong> For the best results, eat these Hong Kong egg tarts while they are still warm! The egg tarts can be refrigerated and stored in an air tight container after they have completely cooled. Reheat in a preheated oven at 300°F for 5-8 minutes or serve at room temperature.</p>
+        <p><strong>Tips:</strong> For the best results, eat these Hong Kong egg tarts while they are still warm! The egg tarts can be refrigerated and stored for up to 3-5 days in an air tight container after they have completely cooled. Reheat in a preheated oven at 300°F for 5-8 minutes or serve at room temperature.</p>
       </div>
 
       <div class="source">
@@ -152,5 +152,23 @@
       </div>
     </main>
   </div>
+
+  <a href="#ingredients" class="back-to-ingredients" id="backToTop">
+    ↑ Ingredients
+  </a>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const backButton = document.getElementById('backToTop');
+      const ingredientsSection = document.getElementById('ingredients');
+      const ingredientsBottom = ingredientsSection.offsetTop + ingredientsSection.offsetHeight;
+      
+      if (window.scrollY > ingredientsBottom + 100) {
+        backButton.classList.add('visible');
+      } else {
+        backButton.classList.remove('visible');
+      }
+    });
+  </script>
 </body>
 </html>

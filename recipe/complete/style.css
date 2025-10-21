@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
@@ -20,7 +24,7 @@ body {
 
 header {
   text-align: center;
-  padding: 80px 40px 60px;
+  padding: 80px 60px 60px;
   background: #f0dfbf;
   margin-bottom: 60px;
   position: relative;
@@ -304,6 +308,36 @@ ul li input[type="checkbox"]:checked + label {
   border-bottom-color: #999999;
 }
 
+.back-to-ingredients {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #c9a961;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 100;
+  border: 1px solid #b89550;
+}
+
+.back-to-ingredients.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-ingredients:hover {
+  background: #b89550;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 20px 15px;
@@ -311,7 +345,7 @@ ul li input[type="checkbox"]:checked + label {
 
   header {
     --r: 3.00rem;
-    padding: 60px 30px 50px;
+    padding: 60px 70px 50px;
     margin-bottom: 40px;
   }
 
