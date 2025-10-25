@@ -380,6 +380,17 @@ ul li input[type="checkbox"]:checked + label {
     min-height: 280px;
   }
 
+  /* Reduce image height on phones so instructions are more prominent */
+  .step-image {
+    min-height: 160px;
+    max-height: 38vh;
+  }
+
+  .step-image img {
+    height: 100%;
+    object-position: center center;
+  }
+
   .storage-tips {
     padding: 30px 25px;
     border-radius: 6px;
