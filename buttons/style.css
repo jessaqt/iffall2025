@@ -38,13 +38,8 @@ a#btn_botanicalgarden::before {
 }
 
 a#btn_botanicalgarden::after {
-    right: 36px;
+    right: 16px;
     top: -12px;
-}
-
-a#btn_botanicalgarden span.leaf3 {
-    left: 112px;
-    top: -8px;
 }
 
 @keyframes driftLeft {
@@ -163,11 +158,6 @@ a#btn_botanicalgarden:hover::after {
     animation: driftRight 6.4s linear forwards 0.6s;
 }
 
-a#btn_botanicalgarden:hover span.leaf3 {
-    animation: driftLeft 6.8s linear forwards 0.3s;
-}
-
-
 /* instagram button */
 a#btn_instagram {
     position: relative;
@@ -176,12 +166,9 @@ a#btn_instagram {
     height: 100px;
     margin: 80px auto 0;
     background-color: #000;
-    background-image: url('https://www.svgrepo.com/show/357909/instagram-alt.svg');
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
-    mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
+    -webkit-mask: url('resources/instagram-alt-svgrepo-com.svg') center/contain no-repeat;
+    mask: url('resources/instagram-alt-svgrepo-com.svg') center/contain no-repeat;
     transition: transform 0.4s ease;
     overflow: hidden;
 }
@@ -198,10 +185,129 @@ a#btn_instagram::after {
     opacity: 0;
     transition: opacity 0.8s ease;
     pointer-events: none;
-    -webkit-mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
-    mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
+    -webkit-mask: url('resources/instagram-alt-svgrepo-com.svg') center/contain no-repeat;
+    mask: url('resources/instagram-alt-svgrepo-com.svg') center/contain no-repeat;
 }
 
 a#btn_instagram:hover::after {
     opacity: 1;
+}
+
+/* Nike Button*/
+a#btn_nike {
+  position: relative;
+  display: block;
+  width: 100%;          
+  height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0;
+}
+
+a#btn_nike::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140px;      
+  height: 60px;
+  background: #000;
+  transform: translate(-50%, -50%);
+  -webkit-mask: url('resources/Logo_NIKE.svg') center/contain no-repeat;
+  mask: url('resources/Logo_NIKE.svg') center/contain no-repeat;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+a#btn_nike::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 140px;
+  height: 60px;
+  background: #000;
+  transform: translateY(-50%) translateX(-160%);
+  -webkit-mask: url('resources/Logo_NIKE.svg') center/contain no-repeat;
+  mask: url('resources/Logo_NIKE.svg') center/contain no-repeat;
+  opacity: 0;
+}
+
+a#btn_nike:hover::after {
+  opacity: 0;
+}
+
+a#btn_nike:hover::before {
+  opacity: 1;
+  animation: swoosh-loop-fast 1s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes swoosh-loop-fast {
+  0%   { transform: translateY(-50%) translateX(-160%); opacity: 1; }
+  40%  { transform: translateY(-50%) translateX(100%);  opacity: 1; }
+  60%  { transform: translateY(-50%) translateX(160%);  opacity: 0; }
+  61%  { transform: translateY(-50%) translateX(-160%); opacity: 0; }
+  100% { transform: translateY(-50%) translateX(-160%); opacity: 1; }
+}
+
+/* Coca-Cola Button */
+@font-face {
+  font-family: 'Loki Cola';
+  src: url('resources/LOKICOLA.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a#btn_cocacola {
+  display: block;
+  position: relative;
+  margin: 100px auto;
+  font-family: 'Loki Cola';
+  font-size: 60px;
+  text-decoration: none;
+  text-align: center;
+  color: #E41A1C;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+a#btn_cocacola::after {
+  content: "1 oca Cola";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  color: #E41A1C;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #E41A1C;
+  opacity: 0;
+}
+
+a#btn_cocacola:hover {
+  color: transparent;
+  text-shadow: none;
+}
+
+a#btn_cocacola:hover::after {
+  opacity: 1;
+  animation: typeText 2s steps(18, end) forwards;
+}
+
+@keyframes typeText {
+  0% {
+    width: 0px;
+    border-right-color: #E41A1C;
+  }
+  95% {
+    width: 188px;
+    border-right-color: #E41A1C;
+  }
+  100% {
+    width: 188px;
+    border-right-color: transparent;
+  }
 }
