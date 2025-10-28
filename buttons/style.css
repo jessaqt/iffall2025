@@ -1,0 +1,207 @@
+a#btn_botanicalgarden {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background: url("https://www.missouribotanicalgarden.org/Portals/0/2022redesignassets/MBG/mobot-header-logo.svg") no-repeat center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    background-size: contain;
+    margin-top: 60px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+:root {
+    --leaf-url: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA4MCI+PHBhdGggZD0iTTIwIDFDNSAyMCA1IDYwIDIwIDc5QzM1IDYwIDM1IDIwIDIwIDFaIiBmaWxsPSIjNWZiOTZjIiBzdHJva2U9IiMyZjZiM2IiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0yMCA2TDIwIDc0IiBzdHJva2U9IiMyZjZiM2IiIHN0cm9rZS13aWR0aD0iMS41Ii8+PC9zdmc+");
+}
+
+a#btn_botanicalgarden::before,
+a#btn_botanicalgarden::after,
+a#btn_botanicalgarden span.leaf3 {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 28px;
+    background-image: var(--leaf-url);
+    background-repeat: no-repeat;
+    background-size: 240% 100%;
+    background-position: center top;
+    opacity: 0;
+    transform-origin: top center;
+    will-change: transform, opacity;
+}
+
+a#btn_botanicalgarden::before {
+    left: 0px;
+    top: -10px;
+}
+
+a#btn_botanicalgarden::after {
+    right: 36px;
+    top: -12px;
+}
+
+a#btn_botanicalgarden span.leaf3 {
+    left: 112px;
+    top: -8px;
+}
+
+@keyframes driftLeft {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    10% {
+        transform: translate(-8px, 22px) rotate(8deg);
+        opacity: 0.95;
+    }
+
+    20% {
+        transform: translate(-16px, 48px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translate(-24px, 78px) rotate(10deg);
+    }
+
+    40% {
+        transform: translate(-32px, 112px) rotate(-8deg);
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: translate(-40px, 148px) rotate(12deg);
+    }
+
+    60% {
+        transform: translate(-36px, 184px) rotate(-10deg);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: translate(-28px, 220px) rotate(8deg);
+    }
+
+    80% {
+        transform: translate(-20px, 256px) rotate(-6deg);
+        opacity: 0.5;
+    }
+
+    90% {
+        transform: translate(-12px, 292px) rotate(6deg);
+    }
+
+    100% {
+        transform: translate(-6px, 340px) rotate(-4deg);
+        opacity: 0;
+    }
+}
+
+@keyframes driftRight {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    10% {
+        transform: translate(8px, 22px) rotate(-8deg);
+        opacity: 0.95;
+    }
+
+    20% {
+        transform: translate(16px, 48px) rotate(6deg);
+    }
+
+    30% {
+        transform: translate(24px, 78px) rotate(-10deg);
+    }
+
+    40% {
+        transform: translate(32px, 112px) rotate(8deg);
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: translate(40px, 148px) rotate(-12deg);
+    }
+
+    60% {
+        transform: translate(36px, 184px) rotate(10deg);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: translate(28px, 220px) rotate(-8deg);
+    }
+
+    80% {
+        transform: translate(20px, 256px) rotate(6deg);
+        opacity: 0.5;
+    }
+
+    90% {
+        transform: translate(12px, 292px) rotate(-6deg);
+    }
+
+    100% {
+        transform: translate(6px, 340px) rotate(4deg);
+        opacity: 0;
+    }
+}
+
+a#btn_botanicalgarden:hover {
+    transform: scale(1.15);
+}
+
+a#btn_botanicalgarden:hover::before {
+    animation: driftLeft 6s linear forwards;
+}
+
+a#btn_botanicalgarden:hover::after {
+    animation: driftRight 6.4s linear forwards 0.6s;
+}
+
+a#btn_botanicalgarden:hover span.leaf3 {
+    animation: driftLeft 6.8s linear forwards 0.3s;
+}
+
+
+/* instagram button */
+a#btn_instagram {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 80px auto 0;
+    background-color: #000;
+    background-image: url('https://www.svgrepo.com/show/357909/instagram-alt.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
+    mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+/* gradient source: https://dev.to/dailydevtips1/css-logos-instagram-logo-1i96 */
+a#btn_instagram::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle farthest-corner at 28% 100%,
+            #fcdf8f 0%, #fbd377 10%, #fa8e37 22%, #f73344 35%, transparent 65%),
+        linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+    -webkit-mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
+    mask: url('https://www.svgrepo.com/show/357909/instagram-alt.svg') center/contain no-repeat;
+}
+
+a#btn_instagram:hover::after {
+    opacity: 1;
+}
