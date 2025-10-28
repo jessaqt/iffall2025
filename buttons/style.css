@@ -541,3 +541,92 @@ a#btn_tesla::after {
 a#btn_tesla:hover {
   transform: rotateY(360deg);
 }
+
+a#btn_ibm {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 100px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 80px auto;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+a#btn_ibm .base {
+  position: absolute;
+  inset: 0;
+  background: url("resources/IBM_logo.svg.png") center/contain no-repeat;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+a#btn_ibm .stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #1466c3;
+  transform: scaleX(0.001);
+  transform-origin: left;
+  opacity: 0;
+  -webkit-mask: url("resources/IBM_logo.svg.png") center/contain no-repeat;
+          mask: url("resources/IBM_logo.svg.png") center/contain no-repeat;
+}
+
+a#btn_ibm .s1 { clip-path: inset(0%    0 87.5% 0);  animation-delay: 0s; }
+a#btn_ibm .s2 { clip-path: inset(12.5% 0 75%   0);  animation-delay: 0.08s; }
+a#btn_ibm .s3 { clip-path: inset(25%   0 62.5% 0);  animation-delay: 0.16s; }
+a#btn_ibm .s4 { clip-path: inset(37.5% 0 50%   0);  animation-delay: 0.24s; }
+a#btn_ibm .s5 { clip-path: inset(50%   0 37.5% 0);  animation-delay: 0.32s; }
+a#btn_ibm .s6 { clip-path: inset(62.5% 0 25%   0);  animation-delay: 0.40s; }
+a#btn_ibm .s7 { clip-path: inset(75%   0 12.5% 0);  animation-delay: 0.48s; }
+a#btn_ibm .s8 { clip-path: inset(87.5% 0 0%    0);  animation-delay: 0.56s; }
+
+@keyframes stripeFill {
+  0%   { transform: scaleX(0.001); opacity: 1; }
+  100% { transform: scaleX(1);     opacity: 1; }
+}
+
+a#btn_ibm:hover .base {
+  opacity: 0;
+}
+
+a#btn_ibm:hover .stripe {
+  animation: stripeFill 0.5s cubic-bezier(0.25, 0.8, 0.4, 1) forwards;
+}
+
+a#btn_ibm:not(:hover) .base {
+  opacity: 1;
+}
+
+/* lyft button */
+a#btn_lyft {
+  display: block;
+  width: 120px;
+  height: 160px;
+  margin: 50px auto;
+  background: url("resources/Lyft_logo.svg") center/contain no-repeat;
+  transform-origin: center;
+  perspective: 600px;
+}
+
+@keyframes pop-word {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+a#btn_lyft:hover {
+  animation: pop-word 0.6s forwards;
+}
