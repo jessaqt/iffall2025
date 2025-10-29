@@ -4,12 +4,9 @@ a#btn_botanicalgarden {
     width: 160px;
     height: 160px;
     background: url("https://www.missouribotanicalgarden.org/Portals/0/2022redesignassets/MBG/mobot-header-logo.svg") no-repeat center;
-    background-color: #ffffff;
-    border-radius: 12px;
     background-size: contain;
     margin-top: 60px;
     transition: transform 0.4s ease;
-    cursor: pointer;
 }
 
 :root {
@@ -17,8 +14,7 @@ a#btn_botanicalgarden {
 }
 
 a#btn_botanicalgarden::before,
-a#btn_botanicalgarden::after,
-a#btn_botanicalgarden span.leaf3 {
+a#btn_botanicalgarden::after{
     content: "";
     position: absolute;
     width: 100px;
@@ -184,7 +180,6 @@ a#btn_instagram::after {
         linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
     opacity: 0;
     transition: opacity 0.8s ease;
-    pointer-events: none;
     -webkit-mask: url('resources/instagram-alt-svgrepo-com.svg') center/contain no-repeat;
     mask: url('resources/instagram-alt-svgrepo-com.svg') center/contain no-repeat;
 }
@@ -202,7 +197,6 @@ a#btn_nike {
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
-    cursor: pointer;
     margin: 0;
 }
 
@@ -289,7 +283,6 @@ a#btn_cocacola {
     text-align: center;
     color: #E41A1C;
     overflow: hidden;
-    white-space: nowrap;
 }
 
 a#btn_cocacola::after {
@@ -339,13 +332,10 @@ a#btn_cartoonnetwork {
     position: relative;
     width: 160px;
     height: 160px;
-    margin: auto;
-    margin-top: 60px;
+    margin: 50px auto;
     background: url("resources/Cartoon_Network_2010_logo.svg") no-repeat center;
     background-size: contain;
     background-color: #ffffff;
-    border-radius: 20px;
-    cursor: pointer;
 }
 
 @keyframes floatBounce {
@@ -469,7 +459,6 @@ a#btn_samsung {
     letter-spacing: 2px;
     text-decoration: none;
     position: relative;
-    overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -524,18 +513,15 @@ a#btn_tesla::before {
   -webkit-mask: url('resources/Tesla_Motors.svg.png') center/contain no-repeat;
           mask: url('resources/Tesla_Motors.svg.png') center/contain no-repeat;
   transform: translateZ(20px);
-  border-radius: 8px;
 }
 
 a#btn_tesla::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: #b90e0e;
   -webkit-mask: url('resources/Tesla_Motors.svg.png') center/contain no-repeat;
           mask: url('resources/Tesla_Motors.svg.png') center/contain no-repeat;
   transform: translateZ(-20px);
-  opacity: 0.5;
 }
 
 a#btn_tesla:hover {
@@ -548,9 +534,7 @@ a#btn_ibm {
   width: 180px;
   height: 100px;
   background-color: #fff;
-  overflow: hidden;
   margin: 80px auto;
-  cursor: pointer;
   transition: transform 0.4s ease;
 }
 
